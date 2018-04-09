@@ -1,0 +1,64 @@
+* {
+  display: flex;
+}
+html, body {
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  background-color: #eef3f3;
+  overflow: hidden;
+}
+.water-drop {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.water {
+	background-color: #44dfec;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.water-drop:before {
+  content: "";
+  position: absolute;
+  left: 92.5px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #89ebf3;
+  border-radius: 50%;
+  opacity: 0;
+  animation: droplet 2s ease infinite;
+}
+
+@keyframes droplet {
+  10% {
+    top: 10%;
+    opacity: 1;
+    /*animation-timing-function: cubic-bezier(0.24, 0, 0.76, 0.14);*/
+    animation-timing-function: ease-in;
+  }
+  25% {
+    opacity: 1;
+    top: 575px;
+    animation-timing-function: ease-out;
+    width: 15px;
+    height: 15px;
+    left: 92.5px;
+  }
+  26% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
