@@ -59,6 +59,25 @@ html, body {
   100% {
     opacity: 0;
   }
+
+@-webkit-keyframes water {
+  0%   { height: 0%; }
+  90% {  height: 100%; }
+  100% { height: 0%; }
+}
+
+#water {
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+  -webkit-animation:  water_level 5s infinite; /* Safari 4+ */
+  -moz-animation:    water_level 5s infinite; /* Fx 5+ */
+  -o-animation:      water_level 5s infinite; /* Opera 12+ */
+  animation:         water_level 5s infinite; /* IE 10+, Fx 29+ */
+}
 }
 
 
